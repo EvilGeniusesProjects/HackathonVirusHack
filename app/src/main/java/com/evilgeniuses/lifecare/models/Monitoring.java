@@ -1,22 +1,24 @@
 package com.evilgeniuses.lifecare.models;
 
-public class Monitoring implements Comparable<Monitoring>{
-    public String ID;
-    public int Days;
-    public String Date;
-    public String Pressure;
-    public String Pulse;
-    public String Temperature;
-    public String Defecation;
-    public String Sleep;
-    public String SkinDamage;
-    public String Pain;
-    public String Stroll;
-    public String Leisure;
+public class Monitoring implements Comparable<Monitoring> {
+    private String ID;
+    private int Days;
+    private String Date;
+    private String Pressure;
+    private String Pulse;
+    private String Temperature;
+    private String Defecation;
+    private String Sleep;
+    private String SkinDamage;
+    private String Pain;
+    private String Stroll;
+    private String Leisure;
+    private String Feeling;
+    private String Comment;
 
-    public Monitoring(String ID, int milliseconds, String date, String pressure, String pulse, String temperature, String defecation, String sleep, String skinDamage, String pain, String stroll, String leisure) {
+    public Monitoring(String ID, int days, String date, String pressure, String pulse, String temperature, String defecation, String sleep, String skinDamage, String pain, String stroll, String leisure, String feeling, String comment) {
         this.ID = ID;
-        Days = milliseconds;
+        Days = days;
         Date = date;
         Pressure = pressure;
         Pulse = pulse;
@@ -27,19 +29,19 @@ public class Monitoring implements Comparable<Monitoring>{
         Pain = pain;
         Stroll = stroll;
         Leisure = leisure;
+        Feeling = feeling;
+        Comment = comment;
     }
 
-    Monitoring(){
+    public Monitoring() {
 
     }
 
     @Override
     public int compareTo(Monitoring comparestu) {
-        int compareage=((Monitoring)comparestu).getDays();
-        return this.Days -  compareage;
+        int compareage = ((Monitoring) comparestu).getDays();
+        return this.Days - compareage;
     }
-
-
 
     public String getID() {
         return ID;
@@ -137,4 +139,19 @@ public class Monitoring implements Comparable<Monitoring>{
         Leisure = leisure;
     }
 
+    public String getFeeling() {
+        return Feeling;
+    }
+
+    public void setFeeling(String feeling) {
+        Feeling = feeling;
+    }
+
+    public String getComment() {
+        return Comment;
+    }
+
+    public void setComment(String comment) {
+        Comment = comment;
+    }
 }

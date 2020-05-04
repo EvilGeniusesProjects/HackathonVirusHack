@@ -35,7 +35,7 @@
         android:layout_height="59dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextTemperature"
         android:layout_width="match_parent"
         android:layout_height="613dp"
         android:layout_marginLeft="32dp"

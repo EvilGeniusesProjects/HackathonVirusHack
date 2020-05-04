@@ -164,7 +164,7 @@ class OutputAnalyzer {
                     returnValueSb.append(activity.getString(R.string.row_separator));
                 }
 
-                ((EditText) activity.findViewById(R.id.editText)).setText(returnValueSb.toString());
+                ((EditText) activity.findViewById(R.id.editTextTemperature)).setText(returnValueSb.toString());
 
                 cameraService.stop();
             }

@@ -50,7 +50,7 @@ public class GraphicActivity extends AppCompatActivity implements View.OnClickLi
         imageViewBack.setOnClickListener(this);
 
         spinner = findViewById(R.id.spinner);
-        final String[] items = {"Артериальное давление", "Температура", "Пульс", "Сон"};
+        final String[] items = {"Артериальное давление", "Температура", "Пульс", "Сон", "Самочувствие"};
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -125,6 +125,11 @@ public class GraphicActivity extends AppCompatActivity implements View.OnClickLi
                         }
                         break;
                     case 3:
+                        for(int i = 0; i < mCheckList.size(); i++){
+                            series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
+                        }
+                        break;
+                    case 4:
                         for(int i = 0; i < mCheckList.size(); i++){
                             series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
                         }
