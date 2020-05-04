@@ -65,7 +65,6 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
     EditText editTextPassword;
     Button buttonSignUp;
     Spinner spinner;
-    Spinner spinner2;
 
 
     //Firebase

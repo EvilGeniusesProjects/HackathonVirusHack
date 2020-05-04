@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.evilgeniuses.lifecare.R;
+import com.evilgeniuses.lifecare.activities.pulse.PulseActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MonitoringActivity extends AppCompatActivity implements View.OnClickListener {
@@ -18,7 +19,7 @@ public class MonitoringActivity extends AppCompatActivity implements View.OnClic
 
     ImageView imageViewBack;
     FloatingActionButton floatingActionButton;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,8 @@ public class MonitoringActivity extends AppCompatActivity implements View.OnClic
                 break;
 
             case  R.id.floatingActionButton:
+                Intent intent = new Intent(this, PulseActivity.class);
+                startActivity(intent);
                 break;
         }
     }

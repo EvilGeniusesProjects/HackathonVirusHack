@@ -6,4 +6,16 @@
         <item>Сиделка / родственник</item>
         <item>Врач</item>
     </string-array>
+
+
+    <string name="output_hint">Пожалуйста, поместите свой палец на камеру устройства, также закрывая вспышку.</string>
+    <string name="separator">,</string>
+    <string name="row_separator">\n</string>
+    <string name="raw_values">Измерения (метка времени, значение)</string>
+    <plurals name="measurement_output_template">
+        <item quantity="zero">Пульс: %2.1f (%d циклов в %2.1f сек.)</item>
+        <item quantity="one">Пульс: %2.1f (%d циклов в %2.1f сек.)</item>
+        <item quantity="other">Пульс: %2.1f (%d циклов в %2.1f сек.)</item>
+    </plurals>
+
 </resources>

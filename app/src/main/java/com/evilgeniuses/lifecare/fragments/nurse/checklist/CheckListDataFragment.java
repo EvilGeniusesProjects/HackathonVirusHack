@@ -68,25 +68,17 @@ public class CheckListDataFragment extends Fragment implements View.OnClickListe
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-
-             ///   if (editTextSearch.getText().toString().equals("")) {
                     mCheckList.clear();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         CheckList checkList = snapshot.getValue(CheckList.class);
-
-                       // if (user.getUserCategory() != null && user.getUserCategory().equals("Ментор")) {
                             mCheckList.add(checkList);
-                      //  }
-
                     }
                 Collections.sort(mCheckList);
 
                 for(CheckList str: mCheckList){
                 }
-
                     checkListAdapter = new CheckListAdapter(getContext(), mCheckList, false);
                     recyclerView.setAdapter(checkListAdapter);
-           //     }
             }
 
             @Override

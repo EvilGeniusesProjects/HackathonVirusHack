@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.pulse.PulseActivity"
+    tools:showIn="@layout/activity_pulse">
+
+    <TextureView
+        android:id="@+id/textureView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        android:gravity="fill_vertical"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textIsSelectable="false"
+        android:textSize="18sp" />
+
+    <TextureView
+        android:id="@+id/graphTextureView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="613dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/colorBackground"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="@string/output_hint"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="Пожалуйста, поместите свой палец на камеру устройства, также закрывая вспышку."
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+</LinearLayout>
