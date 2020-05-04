@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "981316143460",
+    "firebase_url": "https://lifecare-1384a.firebaseio.com",
+    "project_id": "lifecare-1384a",
+    "storage_bucket": "lifecare-1384a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981316143460:android:57bf538df7cf090ab49271",
+        "android_client_info": {
+          "package_name": "com.evilgeniuses.lifecare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981316143460-pdnu097a12tk9guago03mm0d0pmgb3oo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evilgeniuses.lifecare",
+            "certificate_hash": "505bbc322b42882d51f9b2ba7574751044ce0040"
+          }
+        },
+        {
+          "client_id": "981316143460-mph7qk1m8ske32k8i2v36ubfh0gqh4s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdScNykkcT_AXN9dHEYmEXMtqD879BE90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981316143460-mph7qk1m8ske32k8i2v36ubfh0gqh4s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

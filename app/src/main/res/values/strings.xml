@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LifeCare</string>
+
+    <string-array name="listСategories">
+        <item>Категория пользователя</item>
+        <item>Сиделка / родственник</item>
+        <item>Врач</item>
+    </string-array>
+</resources>

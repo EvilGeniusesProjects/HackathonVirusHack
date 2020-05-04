@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_1"
+        android:icon="@drawable/system_ico_check_list"
+        android:title="Чек-лист" />
+    <item
+        android:id="@+id/tab_2"
+        android:icon="@drawable/system_ico_diary"
+        android:title="Дневник" />
+
+    <item
+        android:id="@+id/tab_3"
+        android:icon="@drawable/system_ico_monitoring"
+        android:title="Мониторинг" />
+    <item
+        android:id="@+id/tab_4"
+        android:icon="@drawable/system_ico_knowledge_base"
+        android:title="База знаний" />
+    <item
+        android:id="@+id/tab_5"
+        android:icon="@drawable/system_ico_profile"
+        android:title="Профиль" />
+</menu>
