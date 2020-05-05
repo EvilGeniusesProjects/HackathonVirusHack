@@ -35,6 +35,7 @@ public class TestFragment extends Fragment implements View.OnClickListener {
     private Button mButtonAnswer1;
     private Button mButtonAnswer2;
     private Button mButtonAnswer3;
+    private Button mButtonAnswer4;
     private TextView mTextQuestion;
     private TextView mTextQuestionCount;
 
@@ -52,12 +53,14 @@ public class TestFragment extends Fragment implements View.OnClickListener {
         mButtonAnswer1 = rootView.findViewById(R.id.mButtonAnswer1);
         mButtonAnswer2 = rootView.findViewById(R.id.mButtonAnswer2);
         mButtonAnswer3 = rootView.findViewById(R.id.mButtonAnswer3);
+        mButtonAnswer4 = rootView.findViewById(R.id.mButtonAnswer4);
         mTextQuestion = rootView.findViewById(R.id.mTextQuestion);
         mTextQuestionCount = rootView.findViewById(R.id.mTextQuestionCount);
 
         mButtonAnswer1.setOnClickListener(this);
         mButtonAnswer2.setOnClickListener(this);
         mButtonAnswer3.setOnClickListener(this);
+        mButtonAnswer4.setOnClickListener(this);
 
         readDatabase();
         getQuestionCount();
@@ -119,6 +122,7 @@ public class TestFragment extends Fragment implements View.OnClickListener {
             mButtonAnswer1.setText(cursor.getString(2));
             mButtonAnswer2.setText(cursor.getString(3));
             mButtonAnswer3.setText(cursor.getString(4));
+            mButtonAnswer4.setText(cursor.getString(5));
             mTextQuestionCount.setText("Вопрос " + (mCountQuestion + 1) + " из " + cursor.getCount());
         } else {
             float percent = (mPointQuestion * 100.0f) / (cursor.getCount() * 2);
@@ -143,6 +147,9 @@ public class TestFragment extends Fragment implements View.OnClickListener {
                 addPoints(1);
                 break;
             case R.id.mButtonAnswer3:
+                addPoints(0);
+                break;
+            case R.id.mButtonAnswer4:
                 addPoints(0);
                 break;
         }

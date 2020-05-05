@@ -11,9 +11,11 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.evilgeniuses.lifecare.R;
+import com.evilgeniuses.lifecare.activities.TestActivity;
 import com.evilgeniuses.lifecare.activities.WebViewActivity;
 import com.evilgeniuses.lifecare.interfaces.SwitchFragment;
 
@@ -24,6 +26,9 @@ public class KnowledgeBaseFragment extends Fragment implements View.OnClickListe
 
     EditText editTextSearch;
 
+    CardView cardFAQ;
+    CardView cardTESTS;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -31,15 +36,31 @@ public class KnowledgeBaseFragment extends Fragment implements View.OnClickListe
         editTextSearch = rootView.findViewById(R.id.editTextSearch);
         imageViewSearch = rootView.findViewById(R.id.imageViewSearch);
         imageViewSearch.setOnClickListener(this);
+
+        cardFAQ = rootView.findViewById(R.id.cardFAQ);
+        cardTESTS = rootView.findViewById(R.id.cardTESTS);
+        cardFAQ.setOnClickListener(this);
+        cardTESTS.setOnClickListener(this);
+
         return rootView;
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
+
         switch (v.getId()){
             case R.id.imageViewSearch:
-                Intent intent = new Intent(getContext(), WebViewActivity.class);
+                intent = new Intent(getContext(), WebViewActivity.class);
                 intent.putExtra("search",  editTextSearch.getText().toString());
+                getContext().startActivity(intent);
+                break;
+
+            case R.id.cardFAQ:
+                break;
+
+            case R.id.cardTESTS:
+                intent = new Intent(getContext(), TestActivity.class);
                 getContext().startActivity(intent);
                 break;
         }
