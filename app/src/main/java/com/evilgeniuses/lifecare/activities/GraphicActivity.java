@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.evilgeniuses.lifecare.R;
 import com.evilgeniuses.lifecare.adapters.CheckListAdapter;
 import com.evilgeniuses.lifecare.models.CheckList;
+import com.evilgeniuses.lifecare.models.Monitoring;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -37,7 +38,7 @@ public class GraphicActivity extends AppCompatActivity implements View.OnClickLi
     ImageView imageViewBack;
     Spinner spinner;
     ValueLineChart mCubicValueLineChart;
-    private List<CheckList> mCheckList;
+    private List<Monitoring> mMonitoring;
 
     int index = 1;
 
@@ -71,7 +72,7 @@ public class GraphicActivity extends AppCompatActivity implements View.OnClickLi
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        mCheckList = new ArrayList<>();
+        mMonitoring = new ArrayList<>();
         mCubicValueLineChart = findViewById(R.id.cubiclinechart);
     }
 
@@ -81,7 +82,7 @@ public class GraphicActivity extends AppCompatActivity implements View.OnClickLi
     private void readUsers() {
 
         final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users/" + firebaseUser.getUid() + "/CheckList");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users/" + firebaseUser.getUid() + "/Monitoring");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -93,45 +94,45 @@ public class GraphicActivity extends AppCompatActivity implements View.OnClickLi
                 series.setColor(0xFF56B7F1);
 
 
-                mCheckList.clear();
+                mMonitoring.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    CheckList checkList = snapshot.getValue(CheckList.class);
+                    Monitoring monitoring = snapshot.getValue(Monitoring.class);
 
-                    mCheckList.add(checkList);
+                    mMonitoring.add(monitoring);
 
 
 
                 }
-                Collections.sort(mCheckList);
+                Collections.sort(mMonitoring);
 
-                for(CheckList str: mCheckList){
+                for(Monitoring str: mMonitoring){
                 }
 
 
                 switch (index){
                     case 0:
-                        for(int i = 0; i < mCheckList.size(); i++){
-                            series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
+                        for(int i = 0; i < mMonitoring.size(); i++){
+                            series.addPoint(new ValueLinePoint(mMonitoring.get(i).getDate().substring(5, 7) + "." + mMonitoring.get(i).getDate().substring(8, 10), Integer.valueOf(mMonitoring.get(i).getPressure().substring(0, 3))));
                         }
                         break;
                     case 1:
-                        for(int i = 0; i < mCheckList.size(); i++){
-                            series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
+                        for(int i = 0; i < mMonitoring.size(); i++){
+                            series.addPoint(new ValueLinePoint(mMonitoring.get(i).getDate().substring(5, 7) + "." + mMonitoring.get(i).getDate().substring(8, 10), Float.valueOf(mMonitoring.get(i).getTemperature())));
                         }
                         break;
                     case 2:
-                        for(int i = 0; i < mCheckList.size(); i++){
-                            series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
+                        for(int i = 0; i < mMonitoring.size(); i++){
+                            series.addPoint(new ValueLinePoint(mMonitoring.get(i).getDate().substring(5, 7) + "." + mMonitoring.get(i).getDate().substring(8, 10), Integer.valueOf(mMonitoring.get(i).getPulse())));
                         }
                         break;
                     case 3:
-                        for(int i = 0; i < mCheckList.size(); i++){
-                            series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
+                        for(int i = 0; i < mMonitoring.size(); i++){
+                            series.addPoint(new ValueLinePoint(mMonitoring.get(i).getDate().substring(5, 7) + "." + mMonitoring.get(i).getDate().substring(8, 10), Float.valueOf(mMonitoring.get(i).getSleep())));
                         }
                         break;
                     case 4:
-                        for(int i = 0; i < mCheckList.size(); i++){
-                            series.addPoint(new ValueLinePoint(mCheckList.get(i).getСheckListStartDate().substring(5, 7) + "." + mCheckList.get(i).getСheckListStartDate().substring(8, 10), mCheckList.get(i).getСheckListMilliseconds()));
+                        for(int i = 0; i < mMonitoring.size(); i++){
+                            series.addPoint(new ValueLinePoint(mMonitoring.get(i).getDate().substring(5, 7) + "." + mMonitoring.get(i).getDate().substring(8, 10), Float.valueOf(mMonitoring.get(i).getFeeling())));
                         }
                         break;
                 }

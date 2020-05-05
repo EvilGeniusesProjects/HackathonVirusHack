@@ -46,7 +46,46 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.ViewHolder>{
 
 
         if (diary.getImgage1().equals("STANDARD")){
-            holder.imageView.setImageResource(R.mipmap.ic_launcher);
+            switch (diary.getPain()){
+                case 0:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_1);
+                    break;
+
+                case 1:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_2);
+                    break;
+                case 2:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_2);
+                    break;
+                case 3:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_2);
+                    break;
+                case 4:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_3);
+                    break;
+                case 5:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_4);
+                    break;
+                case 6:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_4);
+                    break;
+                case 7:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_5);
+                    break;
+                case 8:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_5);
+                    break;
+                case 9:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_5);
+                    break;
+                case 10:
+                    holder.imageView.setImageResource(R.drawable.system_ico_smile_6);
+                    break;
+            }
+
+
+
+
         } else {
             Glide.with(mContext).load(diary.getImgage1()).override(256, 256).into(holder.imageView);
         }

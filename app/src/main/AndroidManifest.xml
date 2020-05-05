@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.GraphicActivity"></activity>
+        <activity android:name=".activities.TestActivity"></activity>
+        <activity android:name=".activities.TestListActivity" />
+        <activity android:name=".activities.WebViewActivity" />
+        <activity android:name=".activities.GraphicActivity" />
         <activity android:name=".activities.pulse.PulseActivity" />
         <activity android:name=".activities.MonitoringActivity" />
         <activity android:name=".activities.DiaryActivity" />

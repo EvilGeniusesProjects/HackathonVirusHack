@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.evilgeniuses.lifecare.R;
 import com.evilgeniuses.lifecare.fragments.authentication.LoginFragment;
+import com.evilgeniuses.lifecare.fragments.nurse.KnowledgeBaseFragment;
 import com.evilgeniuses.lifecare.fragments.nurse.MonitoringListFragment;
 import com.evilgeniuses.lifecare.fragments.nurse.ProfileFragment;
 import com.evilgeniuses.lifecare.fragments.nurse.checklist.CheckListFragment;
@@ -44,7 +45,7 @@ public class NavigationNurseActivity extends AppCompatActivity implements Switch
                         setFragment(MonitoringListFragment.newInstance(), "");
                         break;
                     case R.id.tab_4:
-                        setFragment(LoginFragment.newInstance(), "");
+                        setFragment(KnowledgeBaseFragment.newInstance(), "");
                         break;
                     case R.id.tab_5:
                         setFragment(ProfileFragment.newInstance(), "");
