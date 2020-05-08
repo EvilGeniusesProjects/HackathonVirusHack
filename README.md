@@ -3,7 +3,7 @@
 ### Task: необходимо разработать цифровой продукт (приложение), сервис, который помогает организовать уход за тяжелобольным человеком дома. Аудитория — близкие тяжелобольного человека и/или его сиделки.
 
 <p align="center">
-<img src="https://github.com/EvilGeniusesProjects/Resource/blob/master/HackathonVirusHack/Tab1AddCheckList.jpg" alt="drawing" width="250"/><br>d
+<img src="https://github.com/EvilGeniusesProjects/Resource/blob/master/HackathonVirusHack/Tab1AddCheckList.jpg" alt="drawing" width="250"/><br>
 <img src="https://github.com/EvilGeniusesProjects/Resource/blob/master/HackathonVirusHack/Tab1CheckList.jpg" alt="drawing" width="250"/><br>
 <img src="https://github.com/EvilGeniusesProjects/Resource/blob/master/HackathonVirusHack/Tab1Timer.jpg" alt="drawing" width="250"/><br>
 <img src="https://github.com/EvilGeniusesProjects/Resource/blob/master/HackathonVirusHack/Tab2AddDiary.jpg" alt="drawing" width="250"/><br>
